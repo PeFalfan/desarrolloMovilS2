@@ -15,7 +15,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:gravity="center"
-        android:text="Registro de usuario"
+        android:text="@string/registro_de_usuario"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,7 +78,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="30dp"
         android:gravity="center"
-        android:text="Seleccione una de las preguntas secretas: "
+        android:text="@string/seleccione_una_de_las_preguntas_secretas"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/rdPreguntas"
         app:layout_constraintEnd_toEndOf="parent"
@@ -102,19 +102,19 @@
             android:id="@+id/radioButton5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="¿cuál es el nombre de tu primera mascota?" />
+            android:text="@string/cu_l_es_el_nombre_de_tu_primera_mascota" />
 
         <RadioButton
             android:id="@+id/radioButton3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="¿cuál es tu color favorito?" />
+            android:text="@string/cu_l_es_tu_color_favorito" />
 
         <RadioButton
             android:id="@+id/radioButton4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="¿cuál es tu comida favorita?" />
+            android:text="@string/cu_l_es_tu_comida_favorita" />
     </RadioGroup>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -132,7 +132,7 @@
             android:id="@+id/etRespuesta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Respuesta" />
+            android:hint="@string/respuesta" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -142,7 +142,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
-        android:text="Registrar"
+        android:text="@string/registrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"

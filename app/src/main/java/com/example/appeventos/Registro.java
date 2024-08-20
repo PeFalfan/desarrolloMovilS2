@@ -68,9 +68,7 @@ public class Registro extends AppCompatActivity {
                     } else {
                         tilRespuesta.setError(null);
                     }
-//                Toast.makeText(Registro.this, tilUserRegister.getError(), Toast.LENGTH_SHORT).show();
                 Toast.makeText(Registro.this, tilPassRegister.getError(), Toast.LENGTH_SHORT).show();
-                //Toast.makeText(Registro.this, tilRespuesta.getError(), Toast.LENGTH_SHORT).show();
                     if(tilUserRegister.getError() == null  && tilPassRegister.getError() == null && tilRespuesta.getError()== null){
                         if (registerUser(newUsername, newPassword, respuesta)) {
                             Toast.makeText(Registro.this, "Usuario registrado exitosamente", Toast.LENGTH_SHORT).show();

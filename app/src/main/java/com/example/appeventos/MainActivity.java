@@ -12,21 +12,23 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.appeventos.models.Usuario;
 import com.google.android.material.textfield.TextInputLayout;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private TextInputLayout tilUser, tilPass;
     private Button btnIngresar, btnRegistrar;
     private TextView tvRecuperacion;
-    private DataBaseHelper DBHelper;
+    private ArrayList<Usuario> registeredUsers = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        DBHelper= new DataBaseHelper(this);
-        DBHelper.getReadableDatabase();
+        usuarios();
 
         referencias();
         eventos();
@@ -41,6 +43,15 @@ public class MainActivity extends AppCompatActivity {
         tvRecuperacion = findViewById(R.id.tvRecuperacion);
     }
 
+    private void usuarios() {
+        registeredUsers.add(new Usuario("user1", "pass1", "hijole", "ecole"));
+        registeredUsers.add(new Usuario("user2", "pass2", "hijole", "ecolee"));
+        registeredUsers.add(new Usuario("user3", "pass3", "hijole", "ecoleee"));
+        registeredUsers.add(new Usuario("user4", "pass4", "hijole", "ecoleeee"));
+        registeredUsers.add(new Usuario("user5", "pass5", "hijole", "ecoleeeee"));
+
+    }
+
     private void eventos() {
         btnIngresar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,14 +59,16 @@ public class MainActivity extends AppCompatActivity {
                 String nombre_usuario = tilUser.getEditText().getText().toString();
                 String contrasena = tilPass.getEditText().getText().toString();
 
-                if (DBHelper.checkUserCredentials(nombre_usuario, contrasena)) {
-                    Intent intent = new Intent(MainActivity.this, EventsAdminActivity.class);
-                    intent.putExtra("username", nombre_usuario); // Pasar el nombre de usuario
-                    startActivity(intent);
-                } else {
-                    tilPass.setError("Nombre de usuario o contraseña incorrectos");
+                for (Usuario u: registeredUsers
+                     ) {
+                    if (nombre_usuario.equals(u.getNombreUsuario()) && contrasena.equals(u.getContrasena())) {
+                        Intent intent = new Intent(MainActivity.this, EventsAdminActivity.class);
+                        intent.putExtra("username", nombre_usuario); // Pasar el nombre de usuario
+                        startActivity(intent);
+                    } else {
+                        tilPass.setError("Nombre de usuario o contraseña incorrectos");
+                    }
                 }
-
             }
 
         });

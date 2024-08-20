@@ -10,4 +10,11 @@
     <string name="titulo_evento">Titulo Evento</string>
     <string name="guardar_evento">Guardar Evento</string>
     <string name="fecha_seleccionada">Fecha seleccionada:</string>
+    <string name="registro_de_usuario">Registro de usuario</string>
+    <string name="seleccione_una_de_las_preguntas_secretas">Seleccione una de las preguntas secretas:</string>
+    <string name="cu_l_es_el_nombre_de_tu_primera_mascota">¿cuál es el nombre de tu primera mascota?</string>
+    <string name="cu_l_es_tu_color_favorito">¿cuál es tu color favorito?</string>
+    <string name="cu_l_es_tu_comida_favorita">¿cuál es tu comida favorita?</string>
+    <string name="respuesta">Respuesta</string>
+    <string name="registrar">Registrar</string>
 </resources>

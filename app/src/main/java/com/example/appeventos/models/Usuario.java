@@ -1,4 +1,4 @@
-package com.example.appeventos;
+package com.example.appeventos.models;
 
 public class Usuario {
     private int id;
