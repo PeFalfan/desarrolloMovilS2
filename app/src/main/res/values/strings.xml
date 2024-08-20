@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">AppEventos</string>
+    <string name="prueba_de_navegacion">Prueba de navegacion</string>
+    <string name="prueba">Prueba</string>
+    <string name="testing">testing</string>
+    <string name="selecciona_la_fecha">Selecciona la fecha</string>
+    <string name="agregar_fecha">Agregar Fecha</string>
+    <string name="fecha">fecha</string>
+    <string name="cumplea_os_radahn">Cumpleaños Radahn!</string>
+    <string name="titulo_evento">Titulo Evento</string>
+    <string name="guardar_evento">Guardar Evento</string>
+    <string name="fecha_seleccionada">Fecha seleccionada:</string>
+</resources>
